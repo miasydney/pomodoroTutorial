@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var pomodoroModel: PomodoroModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Home()
+            .environmentObject(pomodoroModel)
         }
-        .padding()
+    
     }
-}
+
 
 #Preview {
     ContentView()
